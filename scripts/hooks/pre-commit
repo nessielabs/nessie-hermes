@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#
+# Auto-bump the version and drop a CHANGELOG stub when shipped skill content
+# changes. Installed via the package.json "prepare" script, which points
+# core.hooksPath at scripts/hooks. Mirrors nessie-openclaw's hook.
+#
+set -euo pipefail
+
+TOPLEVEL="$(git rev-parse --show-toplevel)"
+cd "$TOPLEVEL"
+
+STAGED="$(git diff --cached --name-only)"
+
+# Only bump when shipped skill content changed. Docs-only or CHANGELOG-only
+# commits do not trigger a release.
+if ! echo "$STAGED" | grep -qE '^skills/'; then
+  exit 0
+fi
+
+# Respect a manual bump: if package.json is already staged, the author is
+# setting the version by hand (e.g. a minor/major), so leave everything alone.
+if echo "$STAGED" | grep -q '^package.json$'; then
+  exit 0
+fi
+
+CURRENT=$(node -p "require('./package.json').version")
+NEW=$(node -p "const p='${CURRENT}'.split('.'); p[2]=+p[2]+1; p.join('.')")
+
+# Keep both version locations in lockstep.
+node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('package.json','utf8'));p.version='${NEW}';fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n');"
+node -e "const fs=require('fs');const f='skills/nessie/SKILL.md';let s=fs.readFileSync(f,'utf8');s=s.replace(/^version: .*$/m,'version: ${NEW}');fs.writeFileSync(f,s);"
+git add package.json skills/nessie/SKILL.md
+
+# Drop a dated CHANGELOG stub above the newest release, unless the author
+# already wrote one for this version. Refine the bullet before pushing.
+CHANGELOG="CHANGELOG.md"
+if ! grep -q "^## ${NEW} " "$CHANGELOG"; then
+  DATE=$(node -p "new Date().toISOString().slice(0,10)")
+  NEW="${NEW}" DATE="${DATE}" node -e "
+    const fs=require('fs');
+    const lines=fs.readFileSync('CHANGELOG.md','utf8').split('\n');
+    const idx=lines.findIndex(l=>/^## /.test(l));
+    const at=idx===-1?lines.length:idx;
+    lines.splice(at,0,'## '+process.env.NEW+' - '+process.env.DATE,'','- Skill: update the bundled Nessie guidance.','');
+    fs.writeFileSync('CHANGELOG.md',lines.join('\n'));
+  "
+  git add "$CHANGELOG"
+fi

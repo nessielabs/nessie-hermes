@@ -1,0 +1,14 @@
+{
+  "name": "@nessielabs/nessie-hermes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hermes setup guide and agent skill for hosted Nessie MCP.",
+  "license": "MIT-0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nessielabs/nessie-hermes.git"
+  },
+  "scripts": {
+    "prepare": "git rev-parse --git-dir > /dev/null 2>&1 && git config core.hooksPath scripts/hooks || true"
+  }
+}
