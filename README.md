@@ -44,16 +44,16 @@ hermes mcp test nessie
 
 ### 3. Install the skill
 
-From this repository (or a checkout):
+From this repository (`hermes skills install` takes a direct SKILL.md URL):
 
 ```bash
-hermes skills install https://github.com/nessielabs/nessie-hermes
+hermes skills install https://raw.githubusercontent.com/nessielabs/nessie-hermes/main/skills/nessie/SKILL.md
 ```
 
 For local development:
 
 ```bash
-hermes skills install ./skills/nessie
+hermes skills install ./skills/nessie/SKILL.md
 hermes skills list
 ```
 
