@@ -620,8 +620,9 @@ headers, bullets, narrative paragraphs, dates, names, and concrete details when
 they matter. Every claim should trace back to something you actually read in
 full.
 
-Do not include the context title as the first H1 in the body. Nessie stores
-titles separately from context body markdown.
+Start the body with the first real section heading. Nessie stores the
+context title separately from the body markdown, so repeating the title as a
+leading H1 would display it twice.
 
 When creating a context from Nessie research, attach the document IDs of every
 transcript, note, and context read during research. Without provenance, the
@@ -749,8 +750,7 @@ with their API key. Verify with:
 hermes mcp test nessie
 ```
 
-The connection is stored in `~/.hermes/config.yaml` under `mcp_servers`. Do not
-ask the user to run a device-code or OAuth login flow for this server.
+Do not ask the user to run a device-code or OAuth login flow for this server.
 
 ## Provider-Agnostic Guidance
 
