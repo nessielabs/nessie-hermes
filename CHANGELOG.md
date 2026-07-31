@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.6 - 2026-07-31
+
+- Security: make Nessie read-only by default and require an exact preview plus
+  explicit user confirmation before every persistent write.
+
+## 0.1.5 - 2026-07-31
+
+- Skill: prefer structured complete-line context edits for Markdown rows and
+  require a canonical readback after every edit.
+
 ## 0.1.4 - 2026-07-29
 
 - Skill: update the bundled Nessie guidance.
