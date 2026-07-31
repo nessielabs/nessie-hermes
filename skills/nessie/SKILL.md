@@ -1,7 +1,7 @@
 ---
 name: nessie
 description: Search and read the user's Nessie context library from Hermes through hosted MCP.
-version: 0.1.4
+version: 0.1.5
 license: MIT-0
 metadata:
   homepage: https://github.com/nessielabs/nessie-hermes
@@ -697,6 +697,8 @@ JSON:
   optional `folderId`, and provenance `sources`
 - `nessie_sed` — edit a context by exact `oldString` / `newString` (unique
   unless `replaceAll`)
+- `nessie_replace_lines` — safely replace a unique block of complete lines with
+  `oldLines` / `newLines`; pass `newLines: []` to delete it
 - `nessie_mv` — move (`to`), rename (`name`), or unfile (`unfiled`) a context
   (pass exactly one)
 - `nessie_rm` — delete a context
@@ -717,6 +719,13 @@ JSON:
 
 Use write operations when the user asks to save something or when new durable
 knowledge emerged and preserving it would help future sessions.
+
+Prefer `nessie_replace_lines` for complete lines such as Markdown table rows
+and list items. Each array item is one line without a newline character; the
+server owns the separators, so deletion cannot leave an accidental blank line.
+Use `nessie_sed` for inline fragments within a line. After either edit succeeds,
+call `nessie_cat` and verify the changed section; the confirmation line is not a
+content readback.
 
 Before creating new contexts, search for existing ones on the topic first to
 avoid duplicates. Create a context when no existing context covers the topic or
