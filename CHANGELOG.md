@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6 - 2026-07-31
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.5 - 2026-07-31
 
 - Skill: prefer structured complete-line context edits for Markdown rows and
