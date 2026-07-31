@@ -2,7 +2,8 @@
 
 ## 0.1.6 - 2026-07-31
 
-- Skill: update the bundled Nessie guidance.
+- Security: make Nessie read-only by default and require an exact preview plus
+  explicit user confirmation before every persistent write.
 
 ## 0.1.5 - 2026-07-31
 
