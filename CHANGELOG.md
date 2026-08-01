@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7 - 2026-08-01
+
+- Skill: distinguish incoming direct and team shares, teach the canonical owner
+  scopes and collaborative permissions, and require explicit trace access.
+
 ## 0.1.6 - 2026-07-31
 
 - Security: make Nessie read-only by default and require an exact preview plus
