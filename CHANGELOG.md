@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.8 - 2026-08-06
+
+- Skill: batch multiple inline edits to one context in a single ordered,
+  all-or-nothing `nessie_sed` call.
+
 ## 0.1.7 - 2026-08-01
 
 - Skill: distinguish incoming direct and team shares, teach the canonical owner
