@@ -12,11 +12,15 @@ It uses the two extension surfaces Hermes recommends:
    teaches the agent when and how to use those tools well: search strategy,
    source authority, team scoping, takeover workflows, and write-back rules.
 
-No local Nessie app is required. The skill mirrors the Nessie OpenClaw skill,
-which in turn mirrors the Claude Code and Codex skills, so agent behavior
-stays consistent across surfaces.
+The Nessie app is used to create the agent API key and enable Cloud Sync, but
+it does not need to stay running after setup. The skill mirrors the Nessie
+OpenClaw skill, which in turn mirrors the Claude Code and Codex skills, so
+agent behavior stays consistent across surfaces.
 
 ## Setup
+
+The same setup is available in the
+[Nessie Hermes documentation](https://nessielabs.com/docs/hermes-agent-setup).
 
 ### 1. Create a Nessie API key
 
@@ -29,14 +33,35 @@ In the Nessie Mac app: Settings, then API Keys. Create an agent key
 hermes mcp add nessie --url https://mcp.nessielabs.com/mcp --auth header
 ```
 
-When prompted for the auth header, provide:
+When Hermes displays the hidden `API key / Bearer token` prompt, enter only
+the raw key:
 
 ```
-Authorization: Bearer sk_nes_v1_...
+sk_nes_v1_...
 ```
 
-The connection is stored in `~/.hermes/config.yaml` under `mcp_servers`.
-Verify it:
+Do not paste the key into a Hermes conversation, and do not enter a complete
+`Authorization: Bearer ...` header. Hermes stores the secret in
+`~/.hermes/.env` as `MCP_NESSIE_API_KEY`; the server entry in
+`~/.hermes/config.yaml` references that environment variable.
+
+When Hermes asks which tools to enable, choose `select` and start with the
+modern read-only surface:
+
+- `nessie_check_in`
+- `nessie_who_am_i`
+- `nessie_team_list`
+- `nessie_integration_list`
+- `nessie_ls`
+- `nessie_grep`
+- `nessie_cat`
+- `nessie_head`
+- `nessie_tail`
+- `nessie_stat`
+- `nessie_asset_get`
+
+Run `hermes mcp configure nessie` later if you want to opt into specific
+context/profile write or deletion tools. Verify the connection:
 
 ```bash
 hermes mcp test nessie
@@ -44,10 +69,10 @@ hermes mcp test nessie
 
 ### 3. Install the skill
 
-From this repository (`hermes skills install` takes a direct SKILL.md URL):
+Install the skill directly from its public GitHub repository:
 
 ```bash
-hermes skills install https://raw.githubusercontent.com/nessielabs/nessie-hermes/main/skills/nessie/SKILL.md
+hermes skills install nessielabs/nessie-hermes/skills/nessie
 ```
 
 For local development:
@@ -59,7 +84,18 @@ hermes skills list
 
 Skills live in `~/.hermes/skills/`. Use `hermes skills config` to
 enable or disable the skill per platform (CLI, Telegram, and other
-gateways).
+gateways). Start a new Hermes session after setup so both the MCP tools and
+skill are loaded.
+
+## Updates
+
+The hosted MCP tools update automatically when Nessie deploys. The local skill
+is versioned separately. Check for and install its updates with:
+
+```bash
+hermes skills check nessie
+hermes skills update nessie
+```
 
 ## Usage
 
