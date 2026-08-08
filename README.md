@@ -19,8 +19,9 @@ agent behavior stays consistent across surfaces.
 
 ## Setup
 
-The same setup is available in the
-[Nessie Hermes documentation](https://nessielabs.com/docs/hermes-agent-setup).
+The companion Nessie website guide is tracked in
+[nessielabs/nessie-codebase#1297](https://github.com/nessielabs/nessie-codebase/pull/1297)
+and will be linked here after it deploys.
 
 ### 1. Create a Nessie API key
 
@@ -53,6 +54,7 @@ modern read-only surface:
 - `nessie_team_list`
 - `nessie_integration_list`
 - `nessie_ls`
+- `nessie_search`
 - `nessie_grep`
 - `nessie_cat`
 - `nessie_head`
@@ -75,10 +77,19 @@ Install the skill directly from its public GitHub repository:
 hermes skills install nessielabs/nessie-hermes/skills/nessie
 ```
 
-For local development:
+The public repository path above uses the Skills Hub. For local development,
+point Hermes at the working copy instead by adding the repository's `skills`
+directory to `~/.hermes/config.yaml`:
+
+```yaml
+skills:
+  external_dirs:
+    - /absolute/path/to/nessie-hermes/skills
+```
+
+Then verify that Hermes sees the skill:
 
 ```bash
-hermes skills install ./skills/nessie/SKILL.md
 hermes skills list
 ```
 
