@@ -50,6 +50,7 @@ When Hermes asks which tools to enable, choose `select` and start with the
 modern read-only surface:
 
 - `nessie_check_in`
+- `nessie_analytics`
 - `nessie_who_am_i`
 - `nessie_team_list`
 - `nessie_integration_list`
@@ -115,6 +116,7 @@ Ask Hermes things like:
 - "Nessie check-in"
 - "What do I know about this topic?"
 - "What did I decide about this project?"
+- "How many tokens did my coding agents use this month?"
 - "What has my team been working on this week?"
 - "Search my notes about this project."
 
