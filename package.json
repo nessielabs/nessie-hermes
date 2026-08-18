@@ -1,6 +1,6 @@
 {
   "name": "@nessielabs/nessie-hermes",
-  "version": "0.1.9",
+  "version": "0.1.8",
   "private": true,
   "description": "Hermes setup guide and agent skill for hosted Nessie MCP.",
   "license": "MIT-0",
