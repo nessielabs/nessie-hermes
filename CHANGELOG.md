@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.9 - 2026-08-17
+
+- Skill: teach Hermes to answer token-usage questions with the hosted
+  `nessie_analytics` tool.
+
 ## 0.1.8 - 2026-08-06
 
 - Skill: batch multiple inline edits to one context in a single ordered,
