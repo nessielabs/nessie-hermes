@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.10 - 2026-08-20
+
+- Skill: find named folders and contexts before pagination, and follow
+  `nessie_ls` continuation offsets until discovery is complete.
+
 ## 0.1.9 - 2026-08-17
 
 - Skill: teach Hermes to answer token-usage questions with the hosted
