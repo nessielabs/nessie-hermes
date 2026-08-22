@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11 - 2026-08-22
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.10 - 2026-08-20
 
 - Skill: find named folders and contexts before pagination, and follow
