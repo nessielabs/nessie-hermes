@@ -26,10 +26,12 @@ fi
 CURRENT=$(node -p "require('./package.json').version")
 NEW=$(node -p "const p='${CURRENT}'.split('.'); p[2]=+p[2]+1; p.join('.')")
 
-# Keep both version locations in lockstep.
+# Keep the version locations in lockstep, including the update pointer that
+# installed skill copies poll.
 node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('package.json','utf8'));p.version='${NEW}';fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n');"
 node -e "const fs=require('fs');const f='skills/nessie/SKILL.md';let s=fs.readFileSync(f,'utf8');s=s.replace(/^version: .*$/m,'version: ${NEW}');fs.writeFileSync(f,s);"
-git add package.json skills/nessie/SKILL.md
+node -e "const fs=require('fs');const f='skill-version.json';const p=JSON.parse(fs.readFileSync(f,'utf8'));p.version='${NEW}';fs.writeFileSync(f,JSON.stringify(p,null,2)+'\n');"
+git add package.json skills/nessie/SKILL.md skill-version.json
 
 # Drop a dated CHANGELOG stub above the newest release, unless the author
 # already wrote one for this version. Refine the bullet before pushing.

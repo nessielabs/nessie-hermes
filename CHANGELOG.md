@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11 - 2026-08-22
+
+- Skill: detect published skill updates at first Nessie use and point the user at `hermes skills update nessie`; add the `skill-version.json` pointer installed copies poll.
+
 ## 0.1.10 - 2026-08-20
 
 - Skill: find named folders and contexts before pagination, and follow
