@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.13 - 2026-08-25
+
+- Skill: describe meeting reports and transcripts with provider-neutral
+  meeting-source language.
+
 ## 0.1.12 - 2026-08-25
 
 - Skill: search meeting integrations through the provider-neutral `meeting` category instead of defaulting to Granola.
