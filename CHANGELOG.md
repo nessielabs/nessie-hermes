@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.12 - 2026-08-25
+
+- Skill: search meeting integrations through the provider-neutral `meeting` category instead of defaulting to Granola.
+
 ## 0.1.11 - 2026-08-22
 
 - Skill: detect published skill updates at first Nessie use and point the user at `hermes skills update nessie`; add the `skill-version.json` pointer installed copies poll.
