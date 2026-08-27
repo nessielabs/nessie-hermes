@@ -1,9 +1,9 @@
 # Changelog
 
-## 0.1.14 - 2026-08-27
+## 0.1.15 - 2026-08-27
 
 - Setup: label hosted MCP requests as Hermes while retaining the shared Nessie
-  endpoint.
+  endpoint, with a shell-safe quoted setup URL.
 
 ## 0.1.13 - 2026-08-25
 

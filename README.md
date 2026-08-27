@@ -31,7 +31,7 @@ In the Nessie Mac app: Settings, then API Keys. Create an agent key
 ### 2. Register the hosted MCP server
 
 ```bash
-hermes mcp add nessie --url https://mcp.nessielabs.com/mcp?client=hermes --auth header
+hermes mcp add nessie --url "https://mcp.nessielabs.com/mcp?client=hermes" --auth header
 ```
 
 The `client=hermes` marker uses the same hosted MCP route as every other
