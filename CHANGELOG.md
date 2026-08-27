@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.14 - 2026-08-27
+
+- Setup: label hosted MCP requests as Hermes while retaining the shared Nessie
+  endpoint.
+
 ## 0.1.13 - 2026-08-25
 
 - Skill: describe meeting reports and transcripts with provider-neutral
