@@ -1,7 +1,7 @@
 ---
 name: nessie
 description: Search and read the user's Nessie context library from Hermes through hosted MCP.
-version: 0.1.13
+version: 0.1.15
 license: MIT-0
 metadata:
   homepage: https://github.com/nessielabs/nessie-hermes
@@ -908,7 +908,7 @@ user to create a Nessie agent API key (Nessie app: Settings, then API Keys) and
 re-register the server:
 
 ```bash
-hermes mcp add nessie --url https://mcp.nessielabs.com/mcp --auth header
+hermes mcp add nessie --url "https://mcp.nessielabs.com/mcp?client=hermes" --auth header
 ```
 
 When prompted for the header, provide `Authorization: Bearer sk_nes_v1_...`

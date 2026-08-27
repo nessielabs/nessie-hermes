@@ -7,7 +7,7 @@ It uses the two extension surfaces Hermes recommends:
 
 1. The hosted Nessie MCP server, registered through Hermes' native MCP
    support (`hermes mcp add`). Hermes discovers the Nessie tools directly
-   from `https://mcp.nessielabs.com/mcp`.
+   from `https://mcp.nessielabs.com/mcp?client=hermes`.
 2. A `nessie` skill in the open agent-skills format (agentskills.io), which
    teaches the agent when and how to use those tools well: search strategy,
    source authority, team scoping, takeover workflows, and write-back rules.
@@ -31,8 +31,12 @@ In the Nessie Mac app: Settings, then API Keys. Create an agent key
 ### 2. Register the hosted MCP server
 
 ```bash
-hermes mcp add nessie --url https://mcp.nessielabs.com/mcp --auth header
+hermes mcp add nessie --url "https://mcp.nessielabs.com/mcp?client=hermes" --auth header
 ```
+
+The `client=hermes` marker uses the same hosted MCP route as every other
+Nessie connector. It only provides a bounded client-surface label for usage
+telemetry.
 
 When Hermes displays the hidden `API key / Bearer token` prompt, enter only
 the raw key:
