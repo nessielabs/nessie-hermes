@@ -59,7 +59,6 @@ modern read-only surface:
 - `nessie_team_list`
 - `nessie_integration_list`
 - `nessie_ls`
-- `nessie_search`
 - `nessie_grep`
 - `nessie_cat`
 - `nessie_head`
