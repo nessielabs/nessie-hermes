@@ -37,6 +37,15 @@ if not skill_version:
     raise SystemExit("skills/nessie/SKILL.md must declare version frontmatter")
 if skill_version.group(1) != package_version:
     raise SystemExit("skills/nessie/SKILL.md version must match package.json version")
+for needle in [
+    "## Session Initiation",
+    "`initiated` is Nessie's derived, provider-neutral category",
+    "current listing's direct children",
+    'pass `initiated: "human"`',
+    "including the virtual Contexts root, reject an initiation filter",
+]:
+    if needle not in skill:
+        raise SystemExit(f"skills/nessie/SKILL.md must mention {needle}")
 
 pointer = json.loads((root / "skill-version.json").read_text(encoding="utf-8"))
 if pointer.get("surface") != "hermes":
