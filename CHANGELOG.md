@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.17 - 2026-08-30
+
+- Skill: make session initiation filters discoverable in the list and search
+  reference guidance.
+
+## 0.1.16 - 2026-08-29
+
+- Skill: filter session discovery and resume workflows by human, agent, or
+  automation initiation while preserving raw execution metadata.
+
 ## 0.1.15 - 2026-08-27
 
 - Setup: label hosted MCP requests as Hermes while retaining the shared Nessie
