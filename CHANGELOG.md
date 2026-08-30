@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.17 - 2026-08-30
+
+- Skill: make session initiation filters discoverable in the list and search
+  reference guidance.
+
 ## 0.1.16 - 2026-08-29
 
 - Skill: filter session discovery and resume workflows by human, agent, or
