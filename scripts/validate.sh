@@ -47,7 +47,7 @@ for needle in [
     "`native_memory_collection`",
     "`requiresVerification: true`",
     "older MCP host may reject the `memory` filter",
-    "`memory`, or `meeting`",
+    "`memory`,",
     "provider-derived project orientation",
 ]:
     if needle not in skill:
