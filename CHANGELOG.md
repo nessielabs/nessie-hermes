@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.18 - 2026-09-01
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.17 - 2026-08-30
 
 - Skill: make session initiation filters discoverable in the list and search

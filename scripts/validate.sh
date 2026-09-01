@@ -43,6 +43,11 @@ for needle in [
     "current listing's direct children",
     'pass `initiated: "human"`',
     "including the virtual Contexts root, reject an initiation filter",
+    "## Native Coding-Agent Memory",
+    "`native_memory_collection`",
+    "`requiresVerification: true`",
+    "`memory`, or `meeting`",
+    "provider-derived project orientation",
 ]:
     if needle not in skill:
         raise SystemExit(f"skills/nessie/SKILL.md must mention {needle}")
