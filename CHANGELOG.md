@@ -2,12 +2,8 @@
 
 ## 0.1.19 - 2026-09-01
 
-- Skill: add a native-memory discovery fallback for older MCP hosts.
-
-## 0.1.18 - 2026-09-01
-
-- Skill: add read-only native coding-agent memory discovery and verification
-  guidance.
+- Skill: add read-only native coding-agent memory discovery, verification
+  guidance, and a fallback for older MCP hosts.
 
 ## 0.1.17 - 2026-08-30
 
