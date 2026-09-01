@@ -124,8 +124,9 @@ Ask Hermes things like:
 - "Search my notes about this project."
 
 The skill covers first-person and team scoping, literal search for names and
-identifiers, transcript takeover ("resume this Claude session"), and saving
-durable knowledge back to Nessie.
+identifiers, transcript takeover ("resume this Claude session"), read-only
+Claude Code and Codex native memory for project orientation, and saving durable
+knowledge back to Nessie.
 
 ## Bonus: sync your Hermes conversations into Nessie
 

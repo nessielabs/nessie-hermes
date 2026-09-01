@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.19 - 2026-09-01
+
+- Skill: add read-only native coding-agent memory discovery, verification
+  guidance, and a fallback for older MCP hosts.
+
 ## 0.1.17 - 2026-08-30
 
 - Skill: make session initiation filters discoverable in the list and search
