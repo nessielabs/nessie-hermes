@@ -2,7 +2,7 @@
 
 ## 0.1.19 - 2026-09-01
 
-- Skill: update the bundled Nessie guidance.
+- Skill: add a native-memory discovery fallback for older MCP hosts.
 
 ## 0.1.18 - 2026-09-01
 
