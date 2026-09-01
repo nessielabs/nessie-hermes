@@ -2,7 +2,8 @@
 
 ## 0.1.18 - 2026-09-01
 
-- Skill: update the bundled Nessie guidance.
+- Skill: add read-only native coding-agent memory discovery and verification
+  guidance.
 
 ## 0.1.17 - 2026-08-30
 
