@@ -55,6 +55,8 @@ modern read-only surface:
 
 - `nessie_check_in`
 - `nessie_analytics`
+- `nessie_skill_analytics_overview`
+- `nessie_skill_analytics`
 - `nessie_who_am_i`
 - `nessie_team_list`
 - `nessie_integration_list`
