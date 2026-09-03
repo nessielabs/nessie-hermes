@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.21 - 2026-09-03
+
+- Skill: regenerate from nessie-codebase's canonical instructions (skill analytics, initiation filters, teammate resolver workflow, host auth recovery); drop the OpenClaw-specific write-confirmation policy.
+
 ## 0.1.20 - 2026-09-03
 
 - Skill: document the `nessie_skill_analytics_overview` and `nessie_skill_analytics` tools and `hour` granularity on token analytics.
