@@ -38,6 +38,8 @@ if not skill_version:
 if skill_version.group(1) != package_version:
     raise SystemExit("skills/nessie/SKILL.md version must match package.json version")
 for needle in [
+    "nessie_skill_analytics_overview",
+    "recentUses.nextCursor",
     "## Session Initiation",
     "`initiated` is Nessie's derived, provider-neutral category",
     "current listing's direct children",
