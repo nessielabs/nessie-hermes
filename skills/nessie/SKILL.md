@@ -17,7 +17,7 @@ Nessie is the context layer for AI-native work — the user's own work plus
 incoming direct and team shares. It gives agents unified access to what the
 user and people sharing with them already know: saved contexts, generated
 profile sections, raw AI conversation transcripts, and synced source graphs
-such as Obsidian vaults. It can also report token-usage analytics derived from
+such as Obsidian vaults. It can also report token-usage and skill analytics derived from
 imported coding sessions. In Hermes, Nessie is available
 through the hosted Nessie MCP server registered with `hermes mcp add nessie`.
 Hermes discovers the available Nessie tools from that hosted MCP server.
