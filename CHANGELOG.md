@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.20 - 2026-09-03
+
+- Skill: document the `nessie_skill_analytics_overview` and `nessie_skill_analytics` tools and `hour` granularity on token analytics.
+- Setup: recommend both skill analytics tools in the read-only tool list.
+- Skill: mention skill analytics in the mental-model intro.
+
 ## 0.1.19 - 2026-09-01
 
 - Skill: add read-only native coding-agent memory discovery, verification

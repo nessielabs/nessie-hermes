@@ -1,7 +1,7 @@
 ---
 name: nessie
 description: Search and read the user's Nessie context library from Hermes through hosted MCP.
-version: 0.1.19
+version: 0.1.20
 license: MIT-0
 metadata:
   homepage: https://github.com/nessielabs/nessie-hermes
@@ -17,7 +17,7 @@ Nessie is the context layer for AI-native work — the user's own work plus
 incoming direct and team shares. It gives agents unified access to what the
 user and people sharing with them already know: saved contexts, generated
 profile sections, raw AI conversation transcripts, and synced source graphs
-such as Obsidian vaults. It can also report token-usage analytics derived from
+such as Obsidian vaults. It can also report token-usage and skill analytics derived from
 imported coding sessions. In Hermes, Nessie is available
 through the hosted Nessie MCP server registered with `hermes mcp add nessie`.
 Hermes discovers the available Nessie tools from that hosted MCP server.
@@ -93,11 +93,39 @@ the canonical dashboard JSON: current and previous reporting periods,
 per-provider/model request and token counts, integration breakdowns, and trend
 buckets. Input, cache-read, cache-write, output, and reasoning token categories
 remain separate. It defaults to the authenticated user's trailing 30 days in
-UTC day buckets; pass the user's IANA `timezone` when known. `teamId` requires
-creator/admin access to that team and adds per-person breakdowns; `trendUserId`
-selects one team member's trend. Usage is attributed to each imported session's
+UTC day buckets; `hour` granularity is available for single-day questions;
+pass the user's IANA `timezone` when known. `teamId` requires creator/admin
+access to that team and adds per-person breakdowns; `trendUserId` selects one
+team member's trend. Usage is attributed to each imported session's
 creation time rather than the exact time of each model request, and the response
 states that rule in `attribution`.
+
+## Skill Analytics
+
+Use `nessie_skill_analytics_overview` for questions about which skills are
+used, how often, and by whom, and `nessie_skill_analytics` for one skill's
+invocations and success evaluations. Both return the JSON the Skills
+dashboard renders. The overview lists every visible skill with invocation
+totals, unique people, last use, and success rate, plus per-integration
+counts, a people table with each person's top skills, and trend series; page
+its skills and people lists with `skillLimit`/`skillOffset` and
+`peopleLimit`/`peopleOffset`. The per-skill response carries that skill's
+summary, trend buckets, a per-person breakdown with per-agent counts, and
+`recentUses`: individual invocations with `sessionId`, `messageNodeId`,
+`agent`, `occurredAt`, and an `outcome` of `succeeded`, `failed`, or `unknown`
+with a `failure` stage and reason when one was evaluated. Read the originating
+session with `nessie_cat` on `sessionId` when the user asks what happened in a
+failed run, and page recent invocations with `recentLimit` and the returned
+`recentUses.nextCursor`.
+
+Both tools default to the trailing 30 local days in UTC day buckets; pass the
+user's IANA `timezone` when known and `since`/`until` as `yyyy-mm-dd` when the
+user names a period. Granularity accepts `hour`, `day`, `week`, `month`, or
+`year`. `teamId` requires creator/admin access to that team and covers only
+sessions members have shared; `sourceKind` narrows to one agent, such as
+`claude_code_chat` or `codex_chat`. Outcomes come from Nessie's
+per-invocation evaluation, so `unknown` means the invocation was not
+evaluated, not that it failed.
 
 ## Check-In
 
