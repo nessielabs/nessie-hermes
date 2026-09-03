@@ -2,7 +2,8 @@
 
 ## 0.1.20 - 2026-09-03
 
-- Skill: update the bundled Nessie guidance.
+- Skill: document the `nessie_skill_analytics_overview` and `nessie_skill_analytics` tools and `hour` granularity on token analytics.
+- Setup: recommend both skill analytics tools in the read-only tool list.
 
 ## 0.1.19 - 2026-09-01
 
