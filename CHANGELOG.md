@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.22 - 2026-09-08
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.21 - 2026-09-03
 
 - Skill: regenerate from nessie-codebase's canonical instructions (skill analytics, initiation filters, teammate resolver workflow, host auth recovery); drop the OpenClaw-specific write-confirmation policy.
