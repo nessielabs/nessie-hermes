@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.23 - 2026-09-15
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.22 - 2026-09-08
 
 - Skill: browse and search synced local files, read their extracted text, and preserve file references in generated contexts; explain when Cloud Sync is required.
