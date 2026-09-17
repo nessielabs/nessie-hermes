@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.24 - 2026-09-17
+
+- Skill: document imported-email search with `type: "email"`, sender/recipient/subject filters, message and thread reads, and `pageToken` pagination in `nessie_grep`.
+- Skill: clarify that `nessie_integration_list` discovers personal and incoming shared integration roots, excluding native folders, contexts, and skills.
+- Skill: distinguish cloud literal-search behavior from local contiguous-substring matching.
+
 ## 0.1.23 - 2026-09-15
 
 - Skill: `nessie_ls` gains `recursive: true` (the CLI's `find`: every descendant of a parent at any depth, newest first, the reliable answer to "most recent context") and `sort: "updated"` on the Contexts root, which now lists folders first by name like Unix `ls`; `since` / `until` are documented as bounding the listed rows' own updated times. ChatGPT Projects (`chatgpt_project`) are surfaced as read-only directories of chats with Viewer-only grants. Conversation delete previews eligibility before confirming.
