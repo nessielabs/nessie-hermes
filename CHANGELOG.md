@@ -2,7 +2,9 @@
 
 ## 0.1.24 - 2026-09-17
 
-- Skill: update the bundled Nessie guidance.
+- Skill: document imported-email search with `type: "email"`, sender/recipient/subject filters, message and thread reads, and `pageToken` pagination in `nessie_grep`.
+- Skill: clarify that `nessie_integration_list` discovers personal and incoming shared integration roots, excluding native folders, contexts, and skills.
+- Skill: distinguish cloud literal-search behavior from local contiguous-substring matching.
 
 ## 0.1.23 - 2026-09-15
 
