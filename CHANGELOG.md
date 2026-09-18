@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.26 - 2026-09-18
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.25 - 2026-09-18
 
 - Skill: require an IANA `timezone` for skill analytics and use the caller's local 30-day window; document independent user-feedback pagination with `feedbackLimit` and `feedbackCursor`.
