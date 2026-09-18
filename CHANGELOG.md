@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.25 - 2026-09-18
+
+- Skill: require an IANA `timezone` for skill analytics and use the caller's local 30-day window; document independent user-feedback pagination with `feedbackLimit` and `feedbackCursor`.
+- Skill: distinguish exhaustive `nessie_grep` pagination from a bounded relevance pool using `exhaustive` and `candidateLimit`; an absent `pageToken` alone does not establish a complete search.
+- Skill: document `nessie_sharing_get`, `nessie_sharing_add`, and `nessie_sharing_remove` for inspecting and managing direct grants on owned integrations, sessions, ChatGPT Projects, contexts, and folders, including scope and role restrictions.
+
 ## 0.1.24 - 2026-09-17
 
 - Skill: document imported-email search with `type: "email"`, sender/recipient/subject filters, message and thread reads, and `pageToken` pagination in `nessie_grep`.
