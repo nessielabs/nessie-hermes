@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.25 - 2026-09-18
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.24 - 2026-09-17
 
 - Skill: document imported-email search with `type: "email"`, sender/recipient/subject filters, message and thread reads, and `pageToken` pagination in `nessie_grep`.
