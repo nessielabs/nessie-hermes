@@ -1,6 +1,6 @@
 {
   "surface": "hermes",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "skillUrl": "https://raw.githubusercontent.com/nessielabs/nessie-hermes/main/skills/nessie/SKILL.md",
   "updateCommand": "hermes skills update nessie"
 }
