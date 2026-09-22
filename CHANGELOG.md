@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.27 - 2026-09-22
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.26 - 2026-09-18
 
 - Skill: clarify that new direct sharing grants are limited to owned integration accounts, imported provider-chat sessions, ChatGPT Projects, Nessie contexts, and folders; Outlook threads and Nessie-native chats cannot receive new grants.
