@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.28 - 2026-09-29
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.27 - 2026-09-22
 
 - Skill: document Microsoft Teams as a `messaging` source: teams, channels, threads, and direct or group chats, browsed as a hierarchy with `nessie_ls` and read with `nessie_cat` as sender-attributed messages.
