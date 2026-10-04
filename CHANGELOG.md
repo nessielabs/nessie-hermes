@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.28 - 2026-09-29
+
+- Skill: document the provider-neutral `document` group: files from a selected local folder and from a connected SharePoint document library share one shape (folders of extracted-text files), browsed with `nessie_ls` `sourceType: "document"` and searched with `nessie_grep` `type: "document"`.
+- Skill: add the provider-neutral `notes` group covering every note-taking app (Obsidian, Apple Notes), and route note, vault, and memo requests to `notes` instead of `obsidian`.
+- Skill: replace the "no per-provider values" statement with the narrowing rule: `obsidian` narrows `notes`, and `local_folder` and `sharepoint` narrow `document`, to be used only when the user names that provider.
+
 ## 0.1.27 - 2026-09-22
 
 - Skill: document Microsoft Teams as a `messaging` source: teams, channels, threads, and direct or group chats, browsed as a hierarchy with `nessie_ls` and read with `nessie_cat` as sender-attributed messages.
