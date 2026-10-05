@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.29 - 2026-10-05
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.28 - 2026-09-29
 
 - Skill: document the provider-neutral `document` group: files from a selected local folder and from a connected SharePoint document library share one shape (folders of extracted-text files), browsed with `nessie_ls` `sourceType: "document"` and searched with `nessie_grep` `type: "document"`.
