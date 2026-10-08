@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.32 - 2026-10-08
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.31 - 2026-10-07
 
 - Skill: update the bundled Nessie guidance.
