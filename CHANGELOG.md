@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.33 - 2026-10-10
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.32 - 2026-10-08
 
 - Skill: list skills and skill bundles among the nodes `nessie_sharing_add` can share, passing the UUID from `nessie_skill_ls`. Skill sharing is no longer described as managed only in the Nessie app; only the owner can manage a skill's or bundle's grants.
