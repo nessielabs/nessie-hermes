@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.35 - 2026-10-23
+
+- Skill: update the bundled Nessie guidance.
+
 ## 0.1.34 - 2026-10-22
 
 - Skill: document `startedFrom`, `startedSessions`, and `startedSessionCount` on a session's `nessie_stat`: when resuming or taking over a started session, read its `startedFrom` session for the original brief and decisions, and from a parent, follow `startedSessions` to the work it handed off, such as Claude Desktop side sessions and forks.
